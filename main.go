@@ -1,25 +1,25 @@
 package main
 
 import (
-	"github.com/bwmarrin/discordgo"
-	"io"
-	"os"
 	"log"
+	"os"
+
+	"github.com/bwmarrin/discordgo"
 )
 
-func main(){
-	
+func main() {
+
 	// open auth file
 	file, err := os.Open("auth.txt")
 	// error check
-    if err != nil {
-        log.Fatal(err)
-    }
+	if err != nil {
+		log.Fatal(err)
+	}
 	defer file.Close()
-	
+
 	// read file
 	token := make([]byte, 100)
-	_, _ := file.Read(token)
+	_, err := file.Read(token)
 	if err != nil {
 		log.Fatal(err)
 	}
