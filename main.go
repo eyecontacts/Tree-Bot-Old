@@ -18,10 +18,11 @@ func main(){
 	defer file.Close()
 	
 	// read file
-	token, err := io.Read(file)
+	token := make([]byte, 100)
+	_, _ := file.Read(token)
 	if err != nil {
-        log.Fatal(err)
-    }
+		log.Fatal(err)
+	}
 
 	discord, err := discordgo.New("Bot " + token)
 }
