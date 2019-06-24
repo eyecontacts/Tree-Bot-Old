@@ -27,5 +27,5 @@ func main() {
 	discord, err := discordgo.New("Bot " + string(token))
 
 	// init bot
-	err = dg.Open()
+	err = discord.Open()
 }
