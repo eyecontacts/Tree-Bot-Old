@@ -24,5 +24,5 @@ func main() {
 		log.Fatal(err)
 	}
 
-	discord, err := discordgo.New("Bot " + token)
+	discord, err := discordgo.New("Bot " + string(token))
 }
