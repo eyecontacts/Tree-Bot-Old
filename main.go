@@ -4,6 +4,7 @@ import (
 	"github.com/bwmarrin/discordgo"
 	"io"
 	"os"
+	"log"
 )
 
 func main(){
