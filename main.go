@@ -19,10 +19,13 @@ func main() {
 
 	// read file
 	token := make([]byte, 100)
-	_, err := file.Read(token)
+	_, err = file.Read(token)
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	discord, err := discordgo.New("Bot " + string(token))
+
+	// init bot
+	err = dg.Open()
 }
