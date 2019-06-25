@@ -10,7 +10,7 @@ import (
 func main() {
 
 	// open auth file
-	file, err := os.Open("auth.txt")
+	file, err := os.Open("Auth.txt")
 	// error check
 	if err != nil {
 		log.Fatal(err)
