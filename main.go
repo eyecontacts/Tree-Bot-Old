@@ -1,10 +1,10 @@
 package main
 
 import (
-	"fmt"
-	"github.com/bwmarrin/discordgo"
 	"log"
 	"os"
+
+	"github.com/bwmarrin/discordgo"
 )
 
 func main() {
